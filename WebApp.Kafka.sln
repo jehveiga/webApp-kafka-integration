@@ -5,6 +5,12 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Kafka.API", "WebApp.Kafka.API\WebApp.Kafka.API.csproj", "{854BCB23-64AD-4C3A-A55E-B7A46401A51A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Kafka.Core", "WebApp.Kafka.Core\WebApp.Kafka.Core.csproj", "{90D7693A-CE62-45E7-89C8-8D02DA0BF5A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Kafka.Infrastructure", "WebApp.Kafka.Infrastructure\WebApp.Kafka.Infrastructure.csproj", "{285FE9A9-81E1-47F9-8209-106681421A70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Kafka.Application", "WebApp.Kafka.Application\WebApp.Kafka.Application.csproj", "{13570B79-BCC3-4880-AE62-7B3827B7008E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{854BCB23-64AD-4C3A-A55E-B7A46401A51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{854BCB23-64AD-4C3A-A55E-B7A46401A51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{854BCB23-64AD-4C3A-A55E-B7A46401A51A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90D7693A-CE62-45E7-89C8-8D02DA0BF5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90D7693A-CE62-45E7-89C8-8D02DA0BF5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90D7693A-CE62-45E7-89C8-8D02DA0BF5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90D7693A-CE62-45E7-89C8-8D02DA0BF5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285FE9A9-81E1-47F9-8209-106681421A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285FE9A9-81E1-47F9-8209-106681421A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285FE9A9-81E1-47F9-8209-106681421A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285FE9A9-81E1-47F9-8209-106681421A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13570B79-BCC3-4880-AE62-7B3827B7008E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13570B79-BCC3-4880-AE62-7B3827B7008E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13570B79-BCC3-4880-AE62-7B3827B7008E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13570B79-BCC3-4880-AE62-7B3827B7008E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
