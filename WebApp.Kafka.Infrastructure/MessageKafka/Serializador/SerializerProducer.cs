@@ -3,7 +3,7 @@ using System.IO.Compression;
 
 namespace WebApp.Kafka.Infrastructure.MessageKafka.Serializador
 {
-    internal class SerializerDevStore<T> : ISerializer<T>
+    internal class SerializerProducer<T> : ISerializer<T>
     {
         public byte[] Serialize(T data, SerializationContext context)
         {

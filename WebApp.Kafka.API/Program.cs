@@ -1,9 +1,11 @@
 using WebApp.Kafka.Infrastructure;
+using WebApp.Kafka.Producer.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddInfrastructure();
+builder.Services.AddInfrastructure()
+                .AddApplication();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

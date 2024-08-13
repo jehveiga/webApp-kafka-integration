@@ -9,7 +9,6 @@ namespace WebApp.Kafka.Infrastructure
         {
             services.AddMessageServices();
 
-
             return services;
         }
 

@@ -8,7 +8,7 @@ namespace WebApp.Kafka.Core.Entities
 {
     public class Pessoa : Entity
     {
-        public Pessoa(string nome, string cpf, DateTime dataNascimento)
+        public Pessoa(string nome, string cpf, DateTime dataNascimento) : base()
         {
             Nome = nome;
             Cpf = cpf;

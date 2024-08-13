@@ -1,6 +1,7 @@
 ﻿
 using Confluent.Kafka;
 using WebApp.Kafka.Infrastructure.MessageKafka.Config;
+using WebApp.Kafka.Infrastructure.MessageKafka.Serializador;
 
 namespace WebApp.Kafka.Infrastructure.MessageKafka
 {
@@ -13,7 +14,7 @@ namespace WebApp.Kafka.Infrastructure.MessageKafka
             _bootstrapserver = ParametersConfig.BOOTSTRAP_SERVER;
         }
 
-        public async Task<DeliveryResult<string, T>> ProducerAsync<T>(T message)
+        public async Task<string> ProducerAsync<T>(T message)
         {
             var config = new ProducerConfig
             {
@@ -30,11 +31,14 @@ namespace WebApp.Kafka.Infrastructure.MessageKafka
 
 
             // Instância
-            using var producer = new ProducerBuilder<string, T>(config).Build();
+            using var producer = new ProducerBuilder<string, T>(config)
+                                    .SetValueSerializer(new SerializerProducer<T>())
+                                    .Build();
 
             var topico = ParametersConfig.TOPIC_NAME;
 
-            var result = await producer.ProduceAsync(topico, new Message<string, T>
+
+            var result = await producer.ProduceAsync(topic: topico, message: new ()
             {
                 Key = Guid.NewGuid().ToString(),
                 Value = message
@@ -42,7 +46,7 @@ namespace WebApp.Kafka.Infrastructure.MessageKafka
             });
 
 
-            return result;
+            return result.Status.ToString();
         }
     }
 }

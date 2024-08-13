@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace WebApp.Kafka.Infrastructure.MessageKafka.Serializador
 {
-    internal class DeserializerDevStore<T> : IDeserializer<T>
+    internal class DeserializerConsumer<T> : IDeserializer<T>
     {
         public T Deserialize(ReadOnlySpan<byte> data, bool isNull, SerializationContext context)
         {
