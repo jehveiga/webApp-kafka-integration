@@ -11,7 +11,7 @@ namespace WebApp.Kafka.Infrastructure.MessageKafka.Serializador
             using var memoryStream = new MemoryStream(data.ToArray());
             using var zip = new GZipStream(memoryStream, CompressionMode.Decompress, true);
 
-            return JsonSerializer.Deserialize<T>(zip);
+            return JsonSerializer.Deserialize<T>(zip)!;
         }
     }
 }

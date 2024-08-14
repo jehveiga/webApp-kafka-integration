@@ -1,3 +1,4 @@
+using WebApp.Kafka.Producer.API.Utils;
 using WebApp.Kafka.Infrastructure;
 using WebApp.Kafka.Producer.Application;
 
@@ -7,7 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfrastructure()
                 .AddApplication();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new DateTimeConverter("dd/MM/yyyy"));
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

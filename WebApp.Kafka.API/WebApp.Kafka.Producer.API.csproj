@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\WebApp.Kafka.Application\WebApp.Kafka.Producer.Application.csproj" />
     <ProjectReference Include="..\WebApp.Kafka.Infrastructure\WebApp.Kafka.Producer.Infrastructure.csproj" />
   </ItemGroup>

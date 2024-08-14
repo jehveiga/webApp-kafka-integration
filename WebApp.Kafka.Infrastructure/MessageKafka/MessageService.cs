@@ -21,12 +21,12 @@ namespace WebApp.Kafka.Infrastructure.MessageKafka
                 BootstrapServers = _bootstrapserver,
 
                 // Habilitar idempotência
-                EnableIdempotence = true,
-                Acks = Acks.All,
-                MaxInFlight = 1,
-                MessageSendMaxRetries = 2,
+                //EnableIdempotence = true,
+                //Acks = Acks.All,
+                //MaxInFlight = 1,
+                //MessageSendMaxRetries = 2,
 
-                TransactionalId = Guid.NewGuid().ToString()
+                //TransactionalId = Guid.NewGuid().ToString()
             };
 
 

@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using WebApp.Kafka.Core.Entities;
 
 namespace WebApp.Kafka.Producer.Application.Dtos.InputModels
 {
     public class PessoaInputModel
     {
+        [JsonConstructor]
         public PessoaInputModel(string nome, string cpf, DateTime dataNascimento)
         {
             Nome = nome;
@@ -23,7 +25,8 @@ namespace WebApp.Kafka.Producer.Application.Dtos.InputModels
 
         public Pessoa ToEntity()
         {
-            return new Pessoa(Nome, Cpf, DataNascimento); 
+            return new Pessoa(Nome, Cpf, DataNascimento);
+
         }
 
     }
